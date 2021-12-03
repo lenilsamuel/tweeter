@@ -23,15 +23,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,600&display=swap"
-      rel="stylesheet"
-    /> -->
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -42,13 +37,24 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <div class="nav">
-      <span class="tweeter">tweeter</span>
-      <div class="newtweet-reddoubledown">
-        <br>
-        <span class="new-tweet"><b>Write</b> a new tweet</span>
-        <i class="fas fa-angle-double-down"></i>
-      </div>
+    <div class="header-nav">
+      <nav>
+          <span class="tweeter">tweeter</span>
+          <div class="newtweet-reddoubledown">
+            <br />
+            <span class="new-tweet"><b>Write</b> a new tweet</span>
+            <i class="fas fa-angle-double-down"></i>
+          </div>
+      </nav>
+      <header>
+        <div class="avatar">
+          <img src="/images/profile-hex.png" />
+        </div>
+        <br />
+        <div class="name">
+          <h2>Hurr Durr</h2>
+        </div>
+      </header>
     </div>
 
     <!-- Page-specific (main) content here -->
