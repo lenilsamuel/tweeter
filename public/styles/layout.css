@@ -19,6 +19,13 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
+}
+
+main {
+  color: #545149;
+  width: 90%;
+  margin:auto
 }
 
 span {
