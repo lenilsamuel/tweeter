@@ -8,6 +8,10 @@ button {
   font-family: 'Bungee', cursive, sans-serif;
 }
 
+.remaining {
+  color: red;
+}
+
 .tweet-btn-counter {
   display: flex;
   justify-content: space-between;
