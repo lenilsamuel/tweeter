@@ -1,0 +1,50 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.face-name {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap-reverse;
+}
+
+article {
+  border: solid 5px;
+}
+
+article:hover {
+  box-shadow: 5px 5px #a6a3a2;
+}
+
+.user-avatar,
+.user-name,
+p,
+hr,
+.icons,
+.handle {
+  margin: 20px;
+}
+
+.user-name {
+  margin-left: 0px;
+}
+
+hr {
+  border: solid;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timestamp {
+  margin-left: 20px;
+}
+
+.fa-flag:hover,
+.fa-retweet:hover,
+.fa-heart:hover {
+  color: #d89824;
+}
