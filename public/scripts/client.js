@@ -64,7 +64,11 @@ $(document).ready(function () {
   };
 
   renderTweets(data);
-  // const $tweet = createTweetElement(data);
 
-   
+  $('#tweet-form').submit(function (event) {
+    event.preventDefault();
+    const serializedData = $(this).serialize();
+    $.post('/tweets', serializedData);
+  });
+
 });
