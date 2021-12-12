@@ -13,6 +13,12 @@ $(document).ready(function () {
     }
   }
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   createTweetElement = (tweet) => {
     const $tweet = $(`<article>
   <header>
@@ -23,7 +29,7 @@ $(document).ready(function () {
     <div class="handle">${tweet.user.handle}</div>
   </header>
   <body>
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
     <hr>
   </body>
   <footer>
@@ -50,10 +56,10 @@ $(document).ready(function () {
   $('#tweet-form').submit(function (event) {
     event.preventDefault();
     const tweetLength = $('#tweet-text').val().length;
-    console.log(tweetLength);
     if (!tweetLength) {
       return alert('Tweet cannot be empty');
-    } if (tweetLength > 140) {
+    } 
+    if (tweetLength > 140) {
       return alert('Only 140 characters allowed, sorry. Please shorten tweet');
     }
     const serializedData = $(this).serialize();
