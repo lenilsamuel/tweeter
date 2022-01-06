@@ -11,7 +11,7 @@ $(document).ready(function () {
       const $tweet = createTweetElement(tweet);
       $("#tweets-container").prepend($tweet);
     }
-  }
+  };
 
   const escape = function (str) {
     let div = document.createElement("div");
@@ -40,32 +40,40 @@ $(document).ready(function () {
       <i class="fas fa-heart"></i>
     </div>
   </footer>
-</article> <br/>`
-);
+</article> <br/>`);
     return $tweet;
   };
 
   const loadTweets = () => {
-    $.getJSON('/tweets', (data) => {
+    $.getJSON("/tweets", (data) => {
       renderTweets(data);
-    })
-  }
+    });
+  };
 
   loadTweets();
 
-  $('#tweet-form').submit(function (event) {
+  $("#tweet-form").submit(function (event) {
     event.preventDefault();
-    const tweetLength = $('#tweet-text').val().length;
-    if (!tweetLength) {
-      return alert('Tweet cannot be empty');
-    } 
-    if (tweetLength > 140) {
-      return alert('Only 140 characters allowed, sorry. Please shorten tweet');
-    }
-    const serializedData = $(this).serialize();
-    $.post('/tweets', serializedData).then(()=> {
-      loadTweets();
-    })
-  });
+    const tweetLength = $("#tweet-text").val().length;
 
+    if (!tweetLength) {
+      $(".error-box").empty();
+      $(".error-box").text("❗️Tweet cannot be empty❗️").slideDown();
+      return;
+    }
+    if (tweetLength > 140) {
+      $(".error-box").empty();
+      $(".error-box")
+        .text("❗️Tweet exceeds maximum characters allowed❗️")
+        .slideDown();
+      return;
+    }
+
+    const serializedData = $(this).serialize();
+    $.post("/tweets", serializedData).then(() => {
+      $(".error-box").slideUp()
+      loadTweets();
+      $('#tweet-text').val('');
+    });
+  });
 });
