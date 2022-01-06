@@ -2,19 +2,21 @@ nav {
   display: flex;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #d89824;
+  background-image: url(/images/3px-tile.png);
   color: #FFFFFF;
   justify-content: space-between;
-  position: absolute;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   width: 100%;
+  z-index: 9;
 }
 
 .tweeter {
   display: flex;
   margin-left: 1.5em;
   align-items: flex-end;
+  margin-bottom: 1em;
 }
 
 
@@ -35,4 +37,19 @@ nav {
   justify-content: center;
   margin-right: 1.5em;
   font-size: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+    position: fixed;
+    display: flex;
+    height: 120px;
+    width: 100%;
+    color: #FFFFFF;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+  }
 }
