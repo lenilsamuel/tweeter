@@ -36,3 +36,34 @@ span {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header {
+    max-width: 13em;
+    max-height: 20em;
+    float: left;
+    margin-left: 2em;
+    margin-top: 7em;
+  }
+
+  .container {
+    width: 60%;
+    float: right;
+    margin-top: 120px;
+  }
+  nav {
+    background-color: #4056A1;
+    position: fixed;
+    display: flex;
+    height: 120px;
+    width: 100%;
+    color: #FFFFFF;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+  }
+}
