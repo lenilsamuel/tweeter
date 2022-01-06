@@ -1,4 +1,4 @@
-header {
+.header {
   height: 520px;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,6 @@ header {
   width: 100%;
   background-color: #d89824;
   background-image: url(/images/3px-tile.png);
-  z-index: 9;
 }
 
 .name {
