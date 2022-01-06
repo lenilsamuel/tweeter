@@ -32,3 +32,11 @@ form {
   font-family: sans-serif;
   font-size: 30px;
 }
+
+.error-box {
+  display: none;
+  text-align: center;
+  color: red;
+  border: solid;
+  margin-top: 1em;
+}
