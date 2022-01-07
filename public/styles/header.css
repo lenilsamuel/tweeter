@@ -11,12 +11,8 @@
 .name {
   display: flex;
   justify-content: flex-start;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 0;
-}
-
-.header-nav {
-  position: relative;
 }
 
 #texture {
