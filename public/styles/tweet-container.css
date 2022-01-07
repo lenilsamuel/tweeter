@@ -43,6 +43,10 @@ footer {
   margin-left: 20px;
 }
 
+.long-tweet {
+  overflow-wrap: break-word;
+}
+
 .fa-flag:hover,
 .fa-retweet:hover,
 .fa-heart:hover {
